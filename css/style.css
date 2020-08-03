@@ -1,0 +1,641 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+body, html, .wrapper {
+    height: 100%;
+}
+
+.center {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.center > .center-inner,
+.center > .vertical-center-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.center > .center-inner,
+.center > .horizontal-center-inner {
+    text-align: center;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wide {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.sections {
+    height: 100%;
+    background: #fff;
+    z-index: 2;
+}
+
+@-webkit-keyframes bg-color {
+    0% { background-color: #9c27b0; }
+    33%  { background-color: #3f51b5; }
+    66%  { background-color: #00bcd4; }
+    100%  { background-color: #4caf50; }
+}
+
+@-moz-keyframes bg-color {
+    0% { background-color: #9c27b0; }
+    33%  { background-color: #3f51b5; }
+    66%  { background-color: #00bcd4; }
+    100%  { background-color: #4caf50; }
+}
+
+@-ms-keyframes bg-color {
+    0% { background-color: #9c27b0; }
+    33%  { background-color: #3f51b5; }
+    66%  { background-color: #00bcd4; }
+    100%  { background-color: #4caf50; }
+}
+
+@-o-keyframes bg-color {
+    0% { background-color: #9c27b0; }
+    33%  { background-color: #3f51b5; }
+    66%  { background-color: #00bcd4; }
+    100%  { background-color: #4caf50; }
+}
+
+@keyframes bg-color {
+    0% { background-color: #9c27b0; }
+    33%  { background-color: #3f51b5; }
+    66%  { background-color: #00bcd4; }
+    100%  { background-color: #4caf50; }
+}
+
+.intro {
+    -webkit-animation-name: bg-color;
+    -webkit-animation-duration: 60s;
+    -webkit-animation-direction: alernate;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: bg-color;
+    -moz-animation-duration: 60s;
+    -moz-animation-direction: alernate;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-name: bg-color;
+    -o-animation-duration: 60s;
+    -o-animation-direction: alernate;
+    -o-animation-iteration-count: infinite;
+    -ms-animation-name: bg-color;
+    -ms-animation-duration: 60s;
+    -ms-animation-direction: alernate;
+    -ms-animation-iteration-count: infinite;
+    animation-name: bg-color;
+    animation-duration: 60s;
+    animation-direction: alernate;
+    animation-iteration-count: infinite;
+    height: 100%;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.intro:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.intro h1 {
+    position: relative;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+    display: block;
+    letter-spacing: -0.07em;
+    color: rgba(255,255,255,.7);
+    z-index: 1;
+    margin-bottom: 50px;
+    font-weight: normal;
+}
+
+.intro .name {
+    color: #fff;
+    font-weight: bold;
+}
+
+@keyframes arrow {
+    from {bottom: 20px; }
+    to { bottom: 30px; }
+}
+
+.intro .scroll-indicator i {
+    margin-top: 10px;
+}
+
+.intro .scroll-indicator {
+    position: absolute;
+    display: block;
+    bottom: 20px;
+    color: #888;
+    color: rgba(255,255,255,0.4);
+    width: 100%;
+    font-size: 1em;
+    animation: arrow 0.7s ease alternate infinite;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+.intro .scroll-indicator:hover {
+    color: #fff;
+}
+
+section > .title {
+    color: #444;
+    padding: 70px 0 40px 0;
+    position: relative;
+}
+
+section > .title > .wrapper > h1 {
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: -0.07em;
+}
+
+section > .title > .wrapper > h2 {
+    font-size: 1em;
+    letter-spacing: -0.05em;
+    font-family: 'Raleway';
+    color: #888;
+}
+
+.lavolta {
+    background-color: #1e88e5;
+}
+
+.micologia {
+    background-color: #689f38;
+}
+
+.project {
+    color: #fff;
+    padding-top: 50px;
+    overflow: hidden;
+}
+
+.project .wrapper:after,
+.contact-me:after,
+.clear {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.project .description {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+}
+
+.project .preview {
+    width: 70%;
+}
+
+.project:nth-child(even) .description {
+    left: 0;
+}
+
+.project:nth-child(even) .preview {
+    float: right;
+}
+
+.project:nth-child(odd) .description {
+    right: 0;
+}
+
+.project:nth-child(odd) .preview {
+    float: left;
+}
+
+.project .preview img {
+    display: block;
+    width: 100%;
+    max-width: 843px;
+}
+
+.project .description h3 {
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: -0.06em;
+    margin-bottom: 0.3em;
+}
+
+.project .description .summary {
+    font-family: 'Raleway', sans-serif;
+    margin: 20px 0;
+    line-height: 1.4em;
+}
+
+.project .description .skills span {
+    font-family: 'Raleway', sans-serif;
+    background: rgba(0,0,0,0.1);
+    display: inline-block;
+    margin: 2px 2px 2px 0;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.project-secondary {
+    padding: 50px;
+    background-color: #389f95;
+    text-align: center;
+    color: #fff;
+}
+
+.project-secondary h3 {
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: -0.06em;
+    margin-bottom: 1.0em;
+}
+
+.project-secondary img {
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+    border: 5px solid rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+
+.contact-me {
+    padding: 50px 0;
+    background-color: #eee;
+}
+
+.contact-me > .wrapper {
+    max-width: 800px;
+}
+
+.contact-me p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    font-weight: 200;
+    color: #777;
+    float: left;
+    line-height: 1.3em;
+    max-width: 75%;
+}
+
+.contact-me .btn {
+    margin-top: 20px;
+    float: right;
+    padding: 15px 25px;
+    color: #689f38;
+    border: 2px solid #689f38;
+    font-size: 1em;
+}
+
+.contact-me .btn:hover {
+    background: #689f38;
+    color: #fff;
+    border-color: #689f38;
+}
+
+.btn {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 0.8em;
+    border-radius: 3px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: none;
+    text-align: center;
+    transition: all 0.3s ease-out 0s;
+    overflow: hidden;
+    vertical-align: middle;
+    text-shadow: 0px 1px 0px rgba(255,255,255,0.1);
+}
+
+.btn:hover {
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.1);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+}
+
+
+.work > .title {
+    padding-top: 20%;
+    text-align: center;
+}
+
+section.skills {
+    background-color: #eee;
+}
+
+.skills .wrapper {
+    max-width: 800px;
+    padding: 100px 0;
+}
+
+.skills .title {
+    text-align: center;
+}
+
+.skill {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding: 5% 5%;
+    margin-left: -4px;
+    text-align: center;
+}
+
+.skill .title {
+    font-size: 1.5em;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.skill .title .fa {
+    margin-bottom: 10px;
+    vertical-align: middle;
+    display: block;
+    font-size: 2em;
+    text-align: center;
+}
+
+.skill .desc {
+    font-family: 'Raleway', sans-serif;
+    color: #888;
+    line-height: 1.5em;
+}
+
+.contact {
+    background-color: #263238;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.contact .title h1 {
+    color: #ddd;
+}
+
+.contact form {
+    width: 70%;
+    float: left;
+    padding-right: 20px;
+}
+
+.contact form input,
+.contact form textarea {
+    padding: 10px;
+    border: none;
+    background: rgba(0,0,0,0.30);
+    border: 2px solid rgba(0,0,0,0.30);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #ddd;
+    font-size: 1em;
+    padding-left: 35px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 100%;
+    resize: none;
+    overflow: auto;
+    transition: all 0.3s ease;
+}
+
+.contact form input {
+    height: 3em;
+    line-height: 3em;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: rgba(0,0,0,0.35);
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+.contact form input:disabled,
+.contact form textarea:disabled{
+    border-color: rgba(0,0,0,0.15);
+    color: #888;
+    background: rgba(0,0,0,0.10);
+}
+
+.contact form .group > i {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    padding: 10px;
+    margin-top: 0.3em;
+    line-height: 1em;
+    margin-left: 2px;
+    color: #b71c1c;
+}
+
+.group-2 {
+    width: 50%;
+    float: left;
+}
+
+.group-2:first-child {
+    padding-right: 10px;
+}
+
+.contact .btn {
+    background: #b71c1c;
+    border-color: #b71c1c;
+    padding-left: 34px;
+}
+
+.contact .btn.ok,
+.contact .btn.ok:hover {
+    background: #8bc34a;
+    border-color: #8bc34a;
+}
+
+.msg {
+    width: 100%;
+    line-height: 1.4em;
+    padding: 10px;
+    display: none;
+    color: #fff;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border: 2px solid rgba(0,0,0,0.6);
+    text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.msg.ok {
+    background: #8bc34a;
+}
+
+.msg.error {
+    background: #b71c1c;
+}
+
+.contact .btn i {
+    margin-right: 10px;
+    position: absolute;
+    left: 10px;
+    top: 9px;
+    font-size: 1.5em;
+}
+
+.contact .btn:hover {
+    color: #fff;
+    background: #c82e2e;
+    border-color: #c82e2e;
+}
+
+.footer {
+    background: #1b2327;
+    color: #ddd;
+    padding: 50px 10px;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.footer a,
+.contact .info a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #b71c1c;
+}
+
+.contact .info {
+    height: 100%;
+    position: absolute;
+    left: 70%;
+    top: 0;
+    background: #c62828;
+    color: #fff;
+    padding: 20px;
+    padding-top: 60px;
+    width: 30%;
+    max-width: 350px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.4em;
+}
+
+.contact .info label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #ffcdd2;
+}
+
+.contact .info a > .fa {
+    font-size: 2.5em;
+    margin-right: 5px;
+}
+
+[data-appear] {
+    visibility: hidden;
+}
+
+.animated[data-appear] {
+    visibility: visible;
+}
+
+@media screen and (max-width: 960px) {
+    .project {
+	height: auto;
+	padding-bottom: 50px;
+    }
+    .project .preview {
+	display: none;
+    }
+    .project .description {
+	position: static;
+	width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .skill {
+	width: 100%;
+    }
+    .group-2 {
+	width: 100%;
+	padding: 0 !important;
+    }
+    #contact-form {
+	float: none;
+	width: 100%;
+    }
+    .contact .info {
+	width: 100%;
+	position: static;
+	max-width: 100%;
+	margin-top: 50px;
+	padding: 20px;
+    }
+    .contact-me p, .contact-me .btn {
+	width: 100%;
+	max-width: 100%;
+	float: none;
+	position: static;
+    }
+    .contact-me p {
+	margin-bottom: 20px;
+    }
+    .contact-me { 
+	text-align: center;
+    }
+}
